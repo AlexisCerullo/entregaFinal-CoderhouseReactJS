@@ -1,0 +1,36 @@
+.nav-container {
+    background-color: rgb(58, 58, 58);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.nav-links {
+    color: rgb(65, 179, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links:hover,
+.nav-carrito:hover {
+    color: rgb(48, 138, 197);
+}
+
+.nav-logo {
+    width: 10rem;
+}
+
+
+.nav-carrito-imagen {
+    width: 4rem;
+}
+
+.nav-carrito {
+    font-size: 1.5rem;
+    color: rgb(65, 179, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+.CartContenedor {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid black;
+    margin-top: 10vh;
+}
+
+.CartTitulo {
+    text-align: center;
+}
