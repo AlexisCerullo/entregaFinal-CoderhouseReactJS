@@ -6,7 +6,7 @@ import "../css/CartView.css"
 
 const CartView = () => {
   const { cart, clear, removeItem, total } = useContext(CartContext)
-  const preConfirm = () => {
+  const preConfirmVaciar = () => {
     Swal.fire({
       title: '¿Estas seguro de que queres vaciar el carrito?',
       showDenyButton: true,
@@ -19,13 +19,14 @@ const CartView = () => {
       }
     })
   }
+
   return (
     <div className='CartContenedor'>
       <h1 className='CartTitulo'>Tu carrito</h1>
       <div>
         {
           cart.map((compra) => (
-            <div key={compra.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '2rem' }}>
+            <div key={compra.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '2rem', border: 'solid 1px black' }}>
               <img src={compra.img} alt={compra.name} style={{ width: '9rem' }} />
               <p>{compra.name}</p>
               <p>${compra.price},00</p>
@@ -36,9 +37,9 @@ const CartView = () => {
           ))
         }
       </div>
-      <p>Total a pagar: ${total()},00</p>
+      <p className='CartTotal'>Total a pagar: <span>${total()},00</span></p>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '2rem' }}>
-        <button className='btn btn-danger' onClick={preConfirm}>Vaciar Carrito</button>
+        <button className='btn btn-danger' onClick={preConfirmVaciar}>Vaciar Carrito</button>
         <Link to='/checkout' className='btn btn-success'>Terminar Compra</Link>
       </div>
     </div>

@@ -1,10 +1,19 @@
 .CartContenedor {
-    margin: 0 auto;
+    margin: 5vh auto;
     width: 80%;
-    border: 1px solid black;
-    margin-top: 10vh;
+    min-height: 61.5vh;
 }
 
 .CartTitulo {
     text-align: center;
+}
+
+.CartTotal {
+    font-size: 20px;
+    margin: 3vh 0 0 5vh;
+
+}
+
+.CartTotal span {
+    color: green;
 }
