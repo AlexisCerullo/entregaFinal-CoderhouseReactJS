@@ -57,8 +57,8 @@ const Checkout = () => {
                         <h3 className='CheckoutSubtitulo'>El ID de la compra es: <span>{orderId}</span></h3>
                     </div>
                     : <div>
-                        <h1>Complete el formulario con sus datos</h1>
-                        <form onSubmit={handleSubmit(finalizarCompra)}>
+                        <h1 className='FormularioTitulo'>Complete el formulario con sus datos</h1>
+                        <form className='FormularioContenedor' onSubmit={handleSubmit(finalizarCompra)}>
                             <input name='name' className='form-control' placeholder='Ingrese su nombre' type="text" {...register("name", { required: true, minLength: 3 })} />
                             {errors?.name?.type === "required" && <span style={{ color: 'red' }}>Por favor complete el campo.</span>}
                             {errors?.name?.type === "minLength" && <span style={{ color: 'red' }}>El nombre debe de contener minimo tres caracteres.</span>}

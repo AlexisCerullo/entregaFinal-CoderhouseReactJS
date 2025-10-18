@@ -9,3 +9,21 @@
 .CheckoutSubtitulo span {
     color: green;
 }
+
+.FormularioContenedor {
+    width: 80%;
+    min-height: 61.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.FormularioTitulo {
+    text-align: center;
+}
+
+.FormularioContenedor input {
+    height: 7vh;
+}
